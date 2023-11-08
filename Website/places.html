@@ -1,0 +1,306 @@
+
+<head>
+    <link rel="stylesheet" href="./places.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  
+section{
+    padding:5rem 9%;
+    margin-top: -3%;
+}
+.btn{
+  margin-top: 1rem;
+  display: inline-block;
+  border:0.2rem solid black;
+  color:black;
+  cursor:pointer;
+  background:none;
+  font-size:1.7rem;
+  padding:1rem 3rem;
+
+}
+.btn:hover{
+  background: black;
+  color: white;
+}
+
+.packages {
+  background: #eee;
+}
+
+.packages .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(32rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  gap: 1.5rem;
+}
+
+.packages .box-container .box {
+  text-align: center;
+  background: #fff;
+  border: 0.2rem solid #10221b;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: .5rem;
+}
+
+.packages .box-container .box:hover {
+  background: #02965d;
+}
+
+.packages .box-container .box:hover .content > * {
+  color: #fff;
+}
+
+.packages .box-container .box:hover .btn {
+  border-color: #fff;
+}
+
+.packages .box-container .box:hover .btn:hover {
+  background: #fff;
+  color: #10221b;
+}
+
+.packages .box-container .box .image {
+  height: 25rem;
+  overflow: hidden;
+  padding: 2rem;
+  padding-bottom: 0;
+  border-radius: .5rem;
+}
+
+.packages .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: .5rem;
+}
+
+.packages .box-container .box .content {
+  padding: 2rem;
+}
+
+.packages .box-container .box .content h3 {
+  font-size: 2rem;
+  color: #10221b;
+}
+
+.packages .box-container .box .content p {
+  font-size: 1.5rem;
+  color: #10221b;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.packages .box-container .box .content .price {
+  font-size: 2rem;
+  color: #adeec8;
+}
+
+.image-container {
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.image-container img{
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.image-container:hover img {
+  transform: rotateY(180deg);
+}
+
+
+    </style>
+</head>
+<body>
+<section class="packages" id="packages"><section id="up"> <b></b></section>
+
+   <h1 class="heading" style="text-align: center; font-size: xx-large;">popular packages</h1>
+
+    <div class="box-container" style="margin-top: 4%;">
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+  const image = document.querySelector('.image');
+  const originalSrc = image.src;
+  const altSrc = image.getAttribute('data-alt-src');
+
+  image.addEventListener('mouseover', function() {
+    image.src = altSrc;
+  });
+
+  image.addEventListener('mouseout', function() {
+    image.src = originalSrc;
+  });
+});
+
+
+      </script>
+        <div class="box">
+          <div class="image-container">
+            <img src="img-1(b).jpg" alt="Image 1" class="image" data-alt-src="img-1.jpg"style="width:400px;height:250px;" >
+          </div>
+            <div class="content"><br><br><br>
+                <h3>Manali Package</h3>
+                <p>Kullu Manali Shimla has always been a very popular destination for the old, young travelers as well as newly married couples who look for cheapest Manali tour packages & Manali Honeymoon Packages to experience the perfect solitude and calmness at its best.</p>
+                <div class="price">Rs 5,999 - Rs 8,999</div>
+                <a href="contact.html" class="btn">explore now</a>
+            </div>
+        </div>
+    
+        <div class="box">
+          <div class="image-container">
+            <img src="img-2(b).jpg" alt="Image 2" class="image" data-alt-src="img-2.jpg"style="width:400px;height:250px;" >
+          </div>
+            <div class="content"><br><br><br>
+                <h3>Goa Package</h3>
+                <p>The most popular beach of Goa, Baga is located close to Calangute beach, around 30 Km North of Panaji. Baga is popular for its nightlife with some very famous clubs such as Brittos, Titos and Mambos.There is also a range of water sports that you can try your hands at.</p>
+                <div class="price">Rs 7,999 - Rs 12,999</div>
+                <a href="contact.html" class="btn">explore now</a>
+            </div>
+        </div>
+
+        <div class="box">
+          <div class="image-container">
+            <img src="img-3.jpg" alt="Image 1" class="image" data-alt-src="img-3(b).webp"style="width:400px;height:250px;" >
+          </div>
+            <div class="content"><br><br><br>
+                <h3>Delhi Package</h3>
+                <p>Boasting cultural diversity and rich heritage, Delhi is home to several temples, tombs, gardens, forts, museums, markets and more. We take you to some of the best spots in the city. Pick the best packages from here and enjoy the tour of Delhi with guide.</p>
+                <div class="price">Rs 2,999 - Rs 8,999</div>
+                <a href="contact.html" class="btn">explore now</a>
+            </div>
+        </div>
+
+        <div class="box">
+          <div class="image-container">
+            <img src="img-4.jpg" alt="Image 1" class="image" data-alt-src="img-5(b).jpg"style="width:400px;height:250px;" >
+          </div>
+            <div class="content"><br><br><br>
+                <h3>Jaipur Package</h3>
+                <p>We organise Jaipur & Rajasthan tours that offer incredible attractions like Forts and Palaces, Deserts, Traditional Villages, colorful cattle fairs, sacred places, camel safaris, beautiful lakes, hill stations and the people. </p>
+                <div class="price">Rs 11,999 - Rs15,999</div>
+                <a href="contact.html" class="btn">explore now</a>
+            </div>
+        </div>
+
+        <div class="box">
+          <div class="image-container">
+            <img src="img-5.jpg" alt="Image 1" class="image" data-alt-src="img-5(b).webp"style="width:400px;height:250px;" >
+          </div>
+            <div class="content"><br><br><br>
+                <h3>Kerala Package</h3>
+                <p>A trip to Kerala is always an experience through greenery to the hills and its climate. Browse through our hand-picked Kerala tour packages prepared for you. Our experts are also available to prepare customised tourism packages</p>
+                <div class="price">Rs 4,999 - Rs 9,999</div>
+                <a href="contact.html" class="btn">explore now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <<div class="image-container">
+              <img src="img-6.jpg" alt="Image 1" class="image" data-alt-src="img-(b).webp"style="width:400px;height:250px;" >
+            </div>
+            <div class="content"><br><br><br>
+                <h3>Darjeeling Package</h3>
+                <p>A trip to Darjeeling will include a ride on the famous Himalayan Railway, a visit to Tiger Hill, or a tour of the stunning landscaped gardens here. Activities like hiking and boating. Do not miss out on a trip to Darjeeling Is famous Mall Road</p>
+                <div class="price">Rs 20,000 - Rs 25,000</div>
+                <a href="contact.html" class="btn">explore now</a>
+            </div>
+          </div>
+
+      <div class="box">
+        <div class="image-container">
+          <img src="img-7.jpg" alt="Image 1" class="image" data-alt-src="img-2(b).webp"style="width:400px;height:250px;" >
+        </div>
+        <div class="content"><br><br><br>
+            <h3>Gujarat Package</h3>
+            <p>Experience the vibrant tapestry of Gujarat, where ancient traditions and modern aspirations blend seamlessly, offering a kaleidoscope of colors, cultures, and cuisine that will ignite your senses and leave you captivated by the Land of Legends.</p>
+            <div class="price">Rs 6,999 - Rs 9,999</div>
+            <a href="contact.html" class="btn">explore now</a>
+        </div>
+    </div>
+
+    <div class="box">
+      <div class="image-container">
+        <img src="img-8.jpg" alt="Image 1" class="image" data-alt-src="img-2(b).webp"style="width:400px;height:250px;" >
+      </div>
+      <div class="content"><br><br><br>
+          <h3>Bangalore Package</h3>
+          <p>Experience the vibrant tapestry of modernity and tradition in the 'Silicon Valley of India,' Bangalore, where centuries-old temples stand in harmony with cutting-edge technology hubs, and the aroma of freshly brewed coffee mingles with the excitement of a dynamic startup culture. Discover a city where lush gardens, bustling markets, and a thriving arts scene come together to create a unique blend of experiences for every traveler.</p>
+          <div class="price">Rs 3,999 - Rs 6,999</div>
+          <a href="contact.html" class="btn">explore now</a>
+      </div>
+  </div>
+
+    <div class="box">
+      <div class="image-container">
+        <img src="img-9.avif" alt="Image 1" class="image" data-alt-src="img-2(b).webp"style="width:400px;height:250px;" >
+      </div>
+      <div class="content"><br><br><br>
+          <h3>Ladakh Package</h3>
+          <p>Discover Ladakh, where ancient monasteries cling to rugged mountains, shimmering lakes reflect endless blue skies, and a timeless culture beckons you to explore the 'Land of High Passes' – a realm of natural beauty and spiritual serenity like no other.</p>
+          <div class="price">Rs 12,999 - Rs 15,999</div>
+          <a href="contact.html" class="btn">explore now</a>
+      </div>
+  </div>
+
+  <div class="box">
+    <div class="image-container">
+      <img src="img-10" alt="Image 1" class="image" data-alt-src="img-2(b).webp"style="width:400px;height:250px;" >
+    </div>
+    <div class="content"><br><br><br>
+        <h3>Andaman-Nicobar Package</h3>
+        <p>Discover a tropical paradise where lush rainforests meet pristine beaches, and vibrant coral reefs teem with marine life. The Andaman and Nicobar Islands beckon you to embark on a journey of exotic beauty, rich culture, and unforgettable adventures in the heart of the Bay of Bengal. Explore this remote archipelago to unearth hidden treasures and create memories that will last a lifetime</p>
+        <div class="price">Rs 12,999 - Rs 16,999</div>
+        <a href="contact.html" class="btn">explore now</a>
+    </div>
+</div>
+
+<div class="box">
+  <div class="image-container">
+    <img src="img-11" alt="Image 1" class="image" data-alt-src="img-2(b).webp"style="width:400px;height:250px;" >
+  </div>
+  <div class="content"><br><br><br>
+      <h3>Kashmir Package</h3>
+      <p>Discover the timeless beauty of Kashmir, where pristine valleys cradle crystal-clear lakes and snow-capped peaks touch the heavens, creating a paradise on Earth that beckons you to explore its breathtaking landscapes and rich cultural heritage.</p>
+      <div class="price">Rs 14,999 - Rs 19,999</div>
+      <a href="contact.html" class="btn">explore now</a>
+  </div>
+</div>
+
+    </div>
+   
+</section>
+<button width="100px" height="50px"style=" position: relative; top: -7%;font-size:x-large; margin: left 80%;">
+  <div style="background-color: rgb(167, 173, 228); width: 60px; height: 40px; margin-left: 2400%;border-radius: 50%;"><a href="#up" style="text-decoration: none; "> Top</a></div>
+ </button>
+ <button width="100px" height="50px"style=" position: relative; top: -6%;font-size:x-large; ">
+
+ <div style="background-color: rgb(167, 173, 228); width: 90px; height: 45px; margin-left: -50%;border-radius: 50%;"><a href="index.html" style="text-decoration: none; "> Home</a></div> </button>
+
+</body>
